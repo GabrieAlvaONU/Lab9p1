@@ -13,6 +13,9 @@ void evenInd(const int numbers[], int size);
 
 void evenVals(const int numbers[], int size);
 
+void reverse(const int numbers[], int size);
+
+
 int main() {
 	srand(time(0));
 
@@ -32,6 +35,10 @@ int main() {
 
 	cout << "Even values: ";
 	evenVals(numbers, SIZE);
+
+	cout << endl;
+	cout << "Reversed order: ";
+	reverse(numbers,SIZE);
 
 }
 
@@ -61,5 +68,11 @@ void evenVals(const int numbers[], int size) {
 			cout << numbers[i] << " ";
 
 		}
+	}
+}
+void reverse(const int numbers[], int size) {
+	for (int i = 9; i >= 0; i--) { 
+		cout << numbers[i] << " ";
+
 	}
 }
