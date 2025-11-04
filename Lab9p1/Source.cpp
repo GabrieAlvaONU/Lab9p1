@@ -15,6 +15,7 @@ void evenVals(const int numbers[], int size);
 
 void reverse(const int numbers[], int size);
 
+void firstAndLast(const int numbers[], int size);
 
 int main() {
 	srand(time(0));
@@ -39,6 +40,11 @@ int main() {
 	cout << endl;
 	cout << "Reversed order: ";
 	reverse(numbers,SIZE);
+
+	cout << endl;
+
+	cout << "First and last: ";
+	firstAndLast(numbers, SIZE);
 
 }
 
@@ -71,8 +77,11 @@ void evenVals(const int numbers[], int size) {
 	}
 }
 void reverse(const int numbers[], int size) {
-	for (int i = 9; i >= 0; i--) { 
+	for (int i = 9; i >= 0; i--) { // realized after the commit size - 1 would be better incase we change the const size
 		cout << numbers[i] << " ";
 
 	}
+}
+void firstAndLast(const int numbers[], int size) {
+	cout << numbers[0] << " " << numbers[size - 1] << endl;
 }
