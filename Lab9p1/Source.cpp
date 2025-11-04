@@ -9,6 +9,8 @@ void printArray(const int arr[], int size);
 
 void fillRand(int numbers[], int size);
 
+void evenInd(const int numbers[], int size);
+
 int main() {
 	srand(time(0));
 	
@@ -19,6 +21,11 @@ int main() {
 	cout << "The random integers: ";
 	printArray(numbers, SIZE);
 
+	cout << endl;
+
+	cout << "Even indices: ";
+	evenInd(numbers, SIZE);
+	
 
 }
 
@@ -33,4 +40,12 @@ void fillRand(int numbers[], int size) {
 	for (int i = 0; i < size; i++) {
 		numbers[i] = rand() % (9000 - 1000 + 1) + 1000;
 	}
+}
+
+void evenInd(const int numbers[], int size){
+	for (int i = 0; i < size; i = i + 2) {
+		cout << numbers[i] << " ";
+
+	}
+
 }
