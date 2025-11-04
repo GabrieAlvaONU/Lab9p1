@@ -11,12 +11,14 @@ void fillRand(int numbers[], int size);
 
 void evenInd(const int numbers[], int size);
 
+void evenVals(const int numbers[], int size);
+
 int main() {
 	srand(time(0));
-	
+
 	const int SIZE = 10;
 	int numbers[SIZE]; // they array
-	
+
 	fillRand(numbers, SIZE);
 	cout << "The random integers: ";
 	printArray(numbers, SIZE);
@@ -25,7 +27,11 @@ int main() {
 
 	cout << "Even indices: ";
 	evenInd(numbers, SIZE);
-	
+
+	cout << endl;
+
+	cout << "Even values: ";
+	evenVals(numbers, SIZE);
 
 }
 
@@ -42,10 +48,18 @@ void fillRand(int numbers[], int size) {
 	}
 }
 
-void evenInd(const int numbers[], int size){
+void evenInd(const int numbers[], int size) {
 	for (int i = 0; i < size; i = i + 2) {
 		cout << numbers[i] << " ";
 
 	}
 
+}
+void evenVals(const int numbers[], int size) {
+	for (int i = 0; i < size; i++) {
+		if (numbers[i] % 2 == 0) {
+			cout << numbers[i] << " ";
+
+		}
+	}
 }
